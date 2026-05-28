@@ -14,10 +14,11 @@
 - Управление данными Docker/Podman
 - Поиск дублирующихся файлов
 ## Установка через Flatpak
-bash
-git clone https://github.com/byoval/purclean.git
+
+```git clone https://github.com/byoval/purclean.git
 cd purclean
 flatpak-builder --user --install --force-clean build-dir com.github.byoval.purclean.yml
+```
 
 Зависимости для сборки
 
