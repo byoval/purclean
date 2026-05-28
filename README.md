@@ -33,10 +33,3 @@ flatpak run com.github.byoval.purclean
 Лицензия
 
 GPL-3.0-or-later
-
-После создания файла заливай на GitHub:
-```bash
-cd ~/Projects/purclean
-git add README.md
-git commit -m "Add README"
-git push
