@@ -17,18 +17,18 @@
 ```bash
 git clone https://github.com/byoval/purclean.git
 cd purclean
-flatpak-builder --user --install --force-clean build-dir com.github.byoval.purclean.yml
+flatpak-builder --user --install --force-clean build-dir com.github.byoval.purclean.yml```
 
 Зависимости для сборки
 
     flatpak-builder
     GNOME SDK 47
 
-flatpak install flathub org.gnome.Sdk//47 org.gnome.Platform//47
+```flatpak install flathub org.gnome.Sdk//47 org.gnome.Platform//47```
 
 Запуск
 
-flatpak run com.github.byoval.purclean
+```flatpak run com.github.byoval.purclean```
 
 Лицензия
 
