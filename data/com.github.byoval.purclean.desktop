@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Purclean
+Exec=purclean
+Icon=com.github.byoval.purclean
+Type=Application
+Categories=System;Utility;
+StartupNotify=true

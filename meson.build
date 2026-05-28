@@ -62,7 +62,7 @@ install_data(
 )
 
 install_data(
-  'data/purclean.desktop',
+  'data/com.github.byoval.purclean.desktop',
   install_dir: get_option('datadir') / 'applications'
 )
 
@@ -78,8 +78,8 @@ install_data(
 
 # Application icon
 install_data(
-  'data/icons/com.github.byoval.purclean.svg',
-  install_dir: get_option('datadir') / 'icons' / 'hicolor' / 'scalable' / 'apps'
+  'data/icons/hicolor/256x256/apps/com.github.byoval.purclean.png',
+  install_dir: join_paths(get_option('datadir'), 'icons/hicolor/256x256/apps')
 )
 
 # Flatpak manifest (not installed — just kept alongside source for reference)

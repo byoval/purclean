@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
   <id>com.github.byoval.purclean</id>
+
+  <launchable type="desktop-id">com.github.byoval.purclean.desktop</launchable>
+
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
 
   <name>Purclean</name>
   <name xml:lang="ru">Purclean</name>
+
   <summary>System cleaner for Fedora Linux</summary>
   <summary xml:lang="ru">Очистка системы Fedora Linux</summary>
 
@@ -24,8 +28,6 @@
     </p>
   </description>
 
-  <launchable type="desktop-id">purclean.desktop</launchable>
-
   <url type="homepage">https://github.com/byoval/purclean</url>
   <url type="bugtracker">https://github.com/byoval/purclean/issues</url>
 
@@ -33,16 +35,26 @@
     <name>Byoval Studio</name>
   </developer>
 
+  <screenshots>
+    <screenshot type="default">
+      <caption>Main window showing disk usage analysis</caption>
+      <caption xml:lang="ru">Главное окно с анализом использования диска</caption>
+      <image type="source" width="1200" height="800">https://raw.githubusercontent.com/byoval/purclean/main/data/screenshots/main.png</image>
+    </screenshot>
+  </screenshots>
+
   <releases>
     <release version="0.1.0" date="2026-05-28">
       <description>
         <p>Initial release with full analysis and cleanup support.</p>
-        <p xml:lang="ru">Первый релиз с полной поддержкой анализа и очистки.</p>
+        <p xml:lang="ru">
+          Первый релиз с полной поддержкой анализа и очистки.
+        </p>
       </description>
     </release>
   </releases>
 
-  <content_rating type="oars-1.1" />
+  <content_rating type="oars-1.1"/>
 
   <provides>
     <binary>purclean</binary>
