@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>com.github.byoval.purclean</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+
+  <name>Purclean</name>
+  <name xml:lang="ru">Purclean</name>
+  <summary>System cleaner for Fedora Linux</summary>
+  <summary xml:lang="ru">Очистка системы Fedora Linux</summary>
+
+  <description>
+    <p>
+      Purclean helps you reclaim disk space on Fedora by finding and removing
+      old kernels, Flatpak and Snap caches, AppImage files, large downloads,
+      systemd journal logs, orphaned packages, browser caches, thumbnail caches,
+      DNF package cache, Docker/Podman data, and duplicate files.
+    </p>
+    <p xml:lang="ru">
+      Purclean помогает освободить место на диске в Fedora: находит и удаляет
+      старые ядра, кэш Flatpak и Snap, файлы AppImage, большие загрузки,
+      журналы systemd, сиротские пакеты, кэш браузеров, кэш миниатюр,
+      кэш DNF, образы Docker/Podman и дублирующиеся файлы.
+    </p>
+  </description>
+
+  <launchable type="desktop-id">purclean.desktop</launchable>
+
+  <url type="homepage">https://github.com/byoval/purclean</url>
+  <url type="bugtracker">https://github.com/byoval/purclean/issues</url>
+
+  <developer id="com.github.byoval">
+    <name>Byoval Studio</name>
+  </developer>
+
+  <releases>
+    <release version="0.1.0" date="2026-05-28">
+      <description>
+        <p>Initial release with full analysis and cleanup support.</p>
+        <p xml:lang="ru">Первый релиз с полной поддержкой анализа и очистки.</p>
+      </description>
+    </release>
+  </releases>
+
+  <content_rating type="oars-1.1" />
+
+  <provides>
+    <binary>purclean</binary>
+  </provides>
+
+  <categories>
+    <category>System</category>
+    <category>Utility</category>
+  </categories>
+
+  <keywords>
+    <keyword>cleaner</keyword>
+    <keyword>disk</keyword>
+    <keyword>fedora</keyword>
+    <keyword>dnf</keyword>
+    <keyword>rpm</keyword>
+    <keyword xml:lang="ru">очистка</keyword>
+    <keyword xml:lang="ru">диск</keyword>
+  </keywords>
+</component>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <!-- Background gradient: deep purple-blue -->
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#3d2b6e"/>
+      <stop offset="100%" stop-color="#1e1040"/>
+    </linearGradient>
+
+    <!-- Broom handle gradient -->
+    <linearGradient id="handle" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#c8a96e"/>
+      <stop offset="100%" stop-color="#8a6a30"/>
+    </linearGradient>
+
+    <!-- Bristles gradient -->
+    <linearGradient id="bristles" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#e8c97a"/>
+      <stop offset="100%" stop-color="#b8892a"/>
+    </linearGradient>
+
+    <!-- Shine gradient on the badge circle -->
+    <radialGradient id="shine" cx="40%" cy="30%" r="60%">
+      <stop offset="0%"   stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Drop shadow filter -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- App icon background (rounded square, GNOME style) -->
+  <rect x="4" y="4" width="120" height="120" rx="26" ry="26"
+        fill="url(#bg)" filter="url(#shadow)"/>
+
+  <!-- Subtle inner shine -->
+  <rect x="4" y="4" width="120" height="120" rx="26" ry="26"
+        fill="url(#shine)"/>
+
+  <!-- Subtle bottom highlight arc -->
+  <ellipse cx="64" cy="108" rx="44" ry="10"
+           fill="#7b4fff" opacity="0.25"/>
+
+  <!-- ---- Broom illustration ---- -->
+
+  <!-- Handle (rotated ~-45 deg, from top-right to bottom-left) -->
+  <g transform="rotate(-42, 64, 64)">
+    <!-- Handle rod -->
+    <rect x="60" y="18" width="8" height="68" rx="4"
+          fill="url(#handle)" filter="url(#shadow)"/>
+
+    <!-- Bristle block -->
+    <rect x="44" y="83" width="40" height="18" rx="5"
+          fill="url(#bristles)"/>
+
+    <!-- Individual bristle tufts -->
+    <line x1="50" y1="101" x2="47" y2="113" stroke="#c89030" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="57" y1="101" x2="55" y2="114" stroke="#d4a040" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="64" y1="101" x2="63" y2="114" stroke="#c89030" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="71" y1="101" x2="71" y2="114" stroke="#d4a040" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="78" y1="101" x2="79" y2="113" stroke="#c89030" stroke-width="3.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Sparkle dots (dust particles being swept) -->
+  <circle cx="28" cy="82" r="4.5" fill="#a78bfa" opacity="0.85" filter="url(#glow)"/>
+  <circle cx="18" cy="68" r="3"   fill="#c4b5fd" opacity="0.70" filter="url(#glow)"/>
+  <circle cx="36" cy="95" r="3"   fill="#7c3aed" opacity="0.80" filter="url(#glow)"/>
+  <circle cx="14" cy="88" r="2"   fill="#ddd6fe" opacity="0.60"/>
+
+  <!-- 4-pointed star sparkle top-right -->
+  <g transform="translate(90, 28)" filter="url(#glow)">
+    <polygon points="0,-9 2,-2 9,0 2,2 0,9 -2,2 -9,0 -2,-2"
+             fill="#f0d060" opacity="0.90"/>
+  </g>
+  <!-- Small star bottom-right -->
+  <g transform="translate(104, 55)" filter="url(#glow)">
+    <polygon points="0,-5 1.2,-1.2 5,0 1.2,1.2 0,5 -1.2,1.2 -5,0 -1.2,-1.2"
+             fill="#fde68a" opacity="0.75"/>
+  </g>
+  <!-- Tiny star mid-right -->
+  <g transform="translate(97, 40)">
+    <polygon points="0,-3.5 0.9,-0.9 3.5,0 0.9,0.9 0,3.5 -0.9,0.9 -3.5,0 -0.9,-0.9"
+             fill="#fde68a" opacity="0.55"/>
+  </g>
+
+  <!-- Thin outer border ring -->
+  <rect x="4" y="4" width="120" height="120" rx="26" ry="26"
+        fill="none" stroke="#7c3aed" stroke-width="1.5" opacity="0.6"/>
+</svg>

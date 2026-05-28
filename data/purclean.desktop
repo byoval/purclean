@@ -1,0 +1,15 @@
+[Desktop Entry]
+Name=Purclean
+Name[ru]=Purclean
+GenericName=System Cleaner
+GenericName[ru]=Очиститель системы
+Exec=purclean
+Icon=purclean
+Terminal=false
+Type=Application
+Categories=Utility;System;
+Comment=Smart cleaner for Fedora Linux
+Comment[ru]=Умный очиститель для Fedora Linux
+Keywords=clean;purge;trash;kernels;flatpak;logs;
+Keywords[ru]=очистка;мусор;ядра;журналы;
+StartupNotify=true

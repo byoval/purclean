@@ -1,0 +1,52 @@
+app-id: com.github.byoval.purclean
+runtime: org.gnome.Platform
+runtime-version: '47'
+sdk: org.gnome.Sdk
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.vala
+command: purclean
+
+finish-args:
+  # Display
+  - --share=ipc
+  - --socket=fallback-x11
+  - --socket=wayland
+  - --device=dri
+
+  # Desktop notifications
+  - --talk-name=org.freedesktop.Notifications
+
+  # Escape sandbox to run host commands (rpm, dnf, journalctl, etc.)
+  # via flatpak-spawn --host
+  - --talk-name=org.freedesktop.Flatpak
+
+  # polkit / pkexec on the host
+  - --system-talk-name=org.freedesktop.PolicyKit1
+
+  # Read/write user home (Trash, Downloads, browser caches, etc.)
+  - --filesystem=home
+
+  # Read-only access to system paths needed for analysis
+  - --filesystem=/var/cache/dnf:ro
+  - --filesystem=/var/snap:ro
+  - --filesystem=/var/tmp/flatpak-cache:ro
+  - --filesystem=/var/log:ro
+
+  # Needed so GSettings schema compiles at build time
+  - --env=GSETTINGS_SCHEMA_DIR=/app/share/glib-2.0/schemas
+
+build-options:
+  prepend-path: /usr/lib/sdk/vala/bin
+  prepend-ld-library-path: /usr/lib/sdk/vala/lib
+
+modules:
+  - name: purclean
+    buildsystem: meson
+    config-opts:
+      - --buildtype=release
+      - -Db_lto=true
+    sources:
+      - type: dir
+        path: .
+    post-install:
+      - glib-compile-schemas /app/share/glib-2.0/schemas

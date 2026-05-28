@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="com.github.byoval.purclean" path="/com/github/byoval/purclean/">
+
+    <!-- Analysis settings -->
+    <key name="archive-min-mb" type="i">
+      <default>400</default>
+      <summary>Minimum archive size to show (MB)</summary>
+    </key>
+
+    <key name="find-max-depth" type="i">
+      <default>3</default>
+      <summary>Maximum search depth for file scan</summary>
+    </key>
+
+    <key name="journal-retention-days" type="i">
+      <default>30</default>
+      <summary>Journal retention period (days)</summary>
+    </key>
+
+    <key name="duplicate-min-mb" type="i">
+      <default>1</default>
+      <summary>Minimum file size for duplicate search (MB)</summary>
+    </key>
+
+    <!-- Notification settings -->
+    <key name="notifications-enabled" type="b">
+      <default>true</default>
+      <summary>Enable disk usage notifications</summary>
+    </key>
+
+    <key name="disk-warning-percent" type="i">
+      <default>85</default>
+      <summary>Disk usage warning threshold (%)</summary>
+    </key>
+
+    <!-- Appearance settings -->
+    <key name="color-scheme" type="s">
+      <choices>
+        <choice value="default"/>
+        <choice value="prefer-dark"/>
+        <choice value="prefer-light"/>
+      </choices>
+      <default>'prefer-dark'</default>
+      <summary>Application color scheme</summary>
+      <description>One of: default (follow system), prefer-dark, prefer-light.</description>
+    </key>
+
+    <!-- Language settings -->
+    <key name="language" type="s">
+      <choices>
+        <choice value="auto"/>
+        <choice value="en"/>
+        <choice value="ru"/>
+      </choices>
+      <default>'auto'</default>
+      <summary>Application language override</summary>
+      <description>One of: auto (follow system), en, ru. Restart required.</description>
+    </key>
+
+  </schema>
+</schemalist>

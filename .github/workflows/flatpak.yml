@@ -1,0 +1,35 @@
+name: Flatpak CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build & bundle Flatpak
+    runs-on: ubuntu-latest
+
+    container:
+      image: bilelmoussaoui/flatpak-github-actions:gnome-47
+      options: --privileged
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build Flatpak
+        uses: flatpak/flatpak-github-actions/flatpak-builder@v6
+        with:
+          bundle: purclean.flatpak
+          manifest-path: com.github.byoval.purclean.yml
+          cache-key: flatpak-builder-${{ github.sha }}
+
+      - name: Upload bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: purclean-flatpak
+          path: purclean.flatpak
+          retention-days: 14

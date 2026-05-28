@@ -1,0 +1,7 @@
+src/purclean.vala
+src/window.vala
+src/cleaner.vala
+src/utils.vala
+src/settings.vala
+src/history.vala
+data/purclean.desktop

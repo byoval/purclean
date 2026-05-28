@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE policyconfig PUBLIC
+ "-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN"
+ "http://www.freedesktop.org/standards/PolicyKit/1/policyconfig.dtd">
+
+<policyconfig>
+  <vendor>Purclean</vendor>
+  <vendor_url>https://github.com/byoval/purclean</vendor_url>
+
+  <action id="com.github.byoval.purclean.remove-old-kernels">
+    <description>Удаление старых ядер Linux</description>
+    <description xml:lang="en">Remove old Linux kernels</description>
+    <message>Для удаления старых ядер требуется разрешение администратора.</message>
+    <message xml:lang="en">Administrator authentication is required to remove old kernels.</message>
+    <icon_name>edit-delete</icon_name>
+    <defaults>
+      <allow_inactive>no</allow_inactive>
+      <allow_active>auth_admin_keep</allow_active>
+    </defaults>
+  </action>
+
+  <action id="com.github.byoval.purclean.clean-system">
+    <description>Очистка системных кэшей и журналов</description>
+    <description xml:lang="en">Clean system caches and journals</description>
+    <message>Приложению требуется разрешение администратора.</message>
+    <message xml:lang="en">Administrator authentication is required.</message>
+    <icon_name>edit-delete</icon_name>
+    <defaults>
+      <allow_inactive>no</allow_inactive>
+      <allow_active>auth_admin_keep</allow_active>
+    </defaults>
+  </action>
+</policyconfig>
